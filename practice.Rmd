@@ -1,0 +1,29 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# Title
+
+## Date
+
+### By Robert Maxim
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r load-packages, message = FALSE}
+library(tidyverse)
+```
+
+
+```{r make-plot}
+storms %>%
+  group_by(year) %>%
+  summarize(wind = mean(wind)) %>%
+  ggplot(mapping = aes(x = year, y = wind)) +
+  geom_line() +
+  geom_point()
+```
