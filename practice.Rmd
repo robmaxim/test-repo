@@ -8,6 +8,8 @@ editor_options:
 
 # Title 2
 
+# Another title here
+
 ## Date
 
 ### By Robert Maxim
